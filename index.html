@@ -42,24 +42,133 @@
 <div class="container-lg">
 
     <h2>Brief</h2>
+        <p> I have been asked to develop a website for a new Pasta Bar called 1789,
+        located in central Wellington<br>
+        Mike the owner, has approached me, and we have discussed the key aims for the website. <br>
+        The aims have been listed out in order of priority and this means that I can complete and have
+        feedback on tasks at regular intervals.<br>
+        Before starting the website I completed some UX studies
+            <ul>
+    <li> Looking at the types of users who will be accessing the site and the kind of design and experiences that
+        they expect when they are online</li>
+    <li> Doing some competition analysis to get a sense of the design style and
+        features of websites that perform similar functions.</li>
+    <li> Completing a basic plan for the site, with the understanding that this
+        most likely will evolve over the project </li>
+</ul>
         <hr>
+<h3> Link to user experience planning</h3>
+    <a class="" href="assets/ALTITUDE.pdf">
+    <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/ux_planning_pic_link.png" alt="pic">
+        </a>
+    <hr>
+    <h2>Project Backlog</h2>
+    <a href="https://github.com/users/paul-khouri/projects/9"> Board </a>
+    <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/projectbacklog.png" alt="backlog board">
+    <p> This is my project backlog board, captured part way through the project. </p>
+
+     <hr>
     <h2>Boards and sprints</h2>
+    <hr>
+    <h3> General brainstorming and concept sketches</h3>
+    <img class="img-fluid" src="assets/images/pasteria_plan_drawings.png" alt="plan drawing">
         <hr>
+    <a href="https://github.com/users/paul-khouri/projects/11">Planning board for front end site</a>
+    <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/Front_endplanningBoard.png" alt="Front Board">
+    <hr>
         <!-- Heading levels -->
             <h3>Sprint One</h3>
-            <p>Plan</p>
-            <p>Boards</p>
-            <p>Link to the Canvas Page</p>
-            <p>Test</p>
-            <p>Reflect</p>
+            <p>Aim: To get a home page design sorted out. This includes trialling some different visuals and getting basic introductory
+            content in</p>
+    <p><a href="https://github.com/paul-khouri/pasta-time/tree/035d9d0ffee5a46ac2e69b0c4c56115e2e880861">Repository link</a></p>
+            <p>This sprint was really lots of trialling and testing and get feedback from Mike</p>
+                <video controls>
+            <source src="assets/vids/FirstTrialViews.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+            <h4>Reflection</h4>
+    <p> This was the first design and I chose an Italian theme. It was really helpful to assemble
+        the page and get used to working with Boostrap 5. I explored how well the site resized on different screens.<br>
+    This was all working 'okay' and I spent quite a bit of time exploring features such as media queries and using the root style
+        to set colour variables. I also spent a lot of time trying to get the black line framing the text.</p>
+    <p> Some examples of the CSS I was exploring </p>
+    <pre style="font-size: 1em;">
+<code class="css">/* interesting comment */
+:root{
+    /* a css variable */
+    --bs-body-bg: rgb(255, 255, 255);
+    --brand-color: rgb(205,66,39);
+}
+    /* this was the black line behind the text */
+    /* took heaps of time but I don't think I'm going to use it */
+    .line-bg{
+background-image: url("black-01.svg");
+background-repeat: repeat-x;
+background-position: center;
+background-size: 4px;
+margin-bottom: 1em;
+}
+    /* media queries are looking really useful */
+    /* there is still more to be done , particularly with the font sizing */
+@media only screen and (max-width: 768px) {
+    h1{
+        font-size: 4em;
+    }
+    .container{
+        max-width: 760px;
+        background-color: antiquewhite;
+    }
+    .line-bg{
+        background-image: none;
+    }
+
+}
+</code></pre>
+    <!-- *************************************** -->
         <hr>
-            <h3>Sprint Two</h3>
-            <p>Plan</p>
-            <p>Boards</p>
-            <p>Link to the Canvas Page</p>
-            <p>Test</p>
-            <p>Reflect</p>
+        <h3>Sprint Two</h3>
+        <p>Aim: The design isn't good enough. Mike was kind of enthusiastic but when his partner(business and life), Vanessa,
+            saw it, I could tell she wasn't happy. We agreed that if we can get a design that everyone is happy with, then
+            we can focus on the technical and content challenges</p>
+        <p>Boards</p>
+    <h4>Design Trials </h4>
+        <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/design_trials.png" alt="plan drawing">
+        <p><a href="https://github.com/paul-khouri/pasta-time/tree/97b7de712723ada7f6a351cb129e997765cb6435">
+        Repository at this point</a></p>
+     <h5>Reflection</h5>
+    <p> These trials worked well and Mike and Vanessa liked both of them. <br>
+    The graphics were made in illustrator and the techniques were quite simple<br>
+    Both the banner graphics were exported as svg files, so they look really clean.</p>
+    <h4>Layout with boostrap </h4>
+     <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/boostrap_column.png" alt="plan drawing">
+    <pre style="font-size: 1em;">
+<code class="html">
+    &lt;div class=&quot;container-lg&quot;&gt;
+            &lt;div class=&quot;row align-items-center &quot;&gt;
+                &lt;div class=&quot;col-lg-7 justify-content-center&quot;&gt;
+                    &lt;h1&gt;Our Place&lt;/h1&gt;
+                    &lt;p class=&quot;body-text&quot;&gt;1154 is a fast, fresh, house made pasta &amp; organic wine restaurant set in a modern,
+                    lively Cuba street eatery. Our aim is to source the best ingredients we
+                    can to make the best possible version of classic pasta dishes you already know &amp; love.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-lg-5&quot;&gt;
+                    &lt;img class=&quot;img-fluid part-img&quot; src=&quot;web_pic_bw.png&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+</code>
+</pre>
+
+
+
+        <p>Test</p>
+
         <hr>
+<!-- *************************************** -->
+    <h2> Developing the database and integrating into the Pasta site </h2>
+    <a href="https://github.com/users/paul-khouri/projects/5">Main planning board</a>
+
     <h3>Images (landscape fits better than portrait)</h3>
     <!-- one image -->
     <div class="row mb-2">

@@ -17,6 +17,9 @@ h1{
     color:white;
     text-align: left;
 }
+p, li{
+    font-size: 1.2em;
+}
 
 /* -- navigation --- */
 .navbar{
@@ -26,7 +29,7 @@ h1{
 }
 
 .nav-item:hover{
-    background-color:var(--brand-green-pale);
+    background-color:var(--base-back);
 }
 
 .nav-link{
@@ -35,6 +38,9 @@ h1{
 }
 .nav-link:hover{
     color:white;
+}
+a img{
+    border: 2px dashed blue;
 }
 
 footer{
