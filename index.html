@@ -37,13 +37,13 @@
                 <a class="nav-link" href="#">Relevant implications (describe)</a>
             </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Front End Development</a>
+                <a class="nav-link" href="#">Front End</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sprints(Database)</a>
+                <a class="nav-link" href="#db">Database</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sprints(Finalising and Testing)</a>
+                <a class="nav-link" href="#">Finalising and Testing</a>
             </li>
                <li class="nav-item">
                 <a class="nav-link" href="#">Relevant implications (address)</a>
@@ -238,14 +238,50 @@ margin-bottom: 1em;
      <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/samplecommitcap_1.png" alt="Commit cap">
     <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/updatedprojectbacklog_1.png" alt="Backlog cap">
 <!-- *************************************** -->
-    <h2> Developing the database and integrating into the Pasta site </h2>
+    <h2 id="db"> Developing the database and integrating into the Pasta site </h2>
     <h3> Starting design</h3>
-    <a href="https://app.diagrams.net/#G1iioj8T2Ml0xZBWP1JuOvW72UuVFE5KJW"> draw.io db planning doc</a>
+    <p> This is my staring design for a database for the pasta site. The news page will be an important way of keep
+        people up to date with the latest events. Authorised users should be able to add a news event easily and should
+    also be able to update or delete one. <br>
+    This is the first priority.<br>
+    Other useful features of the database are all the items on the menu, combo deals and also a members table.</p>
+    <a href="https://app.diagrams.net/#G1iioj8T2Ml0xZBWP1JuOvW72UuVFE5KJW" target="_blank"> draw.io db planning doc</a>
     <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/Pasteria_Database_Plan.png" alt="Three browser views">
+
     <h3>Sprint Four</h3>
-    <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/PasteriaPlanning-Page-2.drawio.png" alt="Three browser views">
+    <h4>Aim:</h4>
+    <p>To create the first iteration of the database:
+        Build only two linked tables: news and member tables.
+    <br> Run installation and test</p>
+    <p>The data plan for these tables is below</p>
+    <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/Dataplan1.png"  alt="Dataplan_base">
+ <p>Screenshots of the sql installer file and a test in a Python test file</p>
+        <!-- two images -->
+    <div class="row mb-3">
+        <div class="col-md-6 my-2">
+           <img class="img-fluid mx-auto d-block" src="assets/images/sql_cap.png">
+        </div>
+        <div class="col-md-6 my-2">
+            <img class="img-fluid mx-auto d-block" src="assets/images/test_python_news.png">
+        </div>
+    </div>
+    <h4>Reflection</h4>
+    <p> It took a few goes to get the sql installer file running but,now it is place,
+        I can add to it and reinstall the database whenever I want to.
+    This will be very useful.<br>
+    After a few false starts I got the query to run and print out, using a testing file.
+        This means I can work out and test a query before implementing in the flask server file.</p>
+
+    <h3>Sprint Five</h3>
+    <h4>Aim:</h4> <p>To build the news page, connect the database and load news items
+    <br> Run and test </p>
     <a href="https://github.com/users/paul-khouri/projects/14/views/1">Planning board for news page</a>
      <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/newspage_board.png" alt="Three browser views">
+    <p> This is my build for the news page. It is purely 'front-end'. This means that all the html and CSS has been worked out.
+    The buttons are not functional, but are part of the design as an authorised user will need these.</p>
+    <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/newsdummy.png" alt="Three browser views">
+
+
 <h4> server.py news route code</h4>
 <pre style="font-size: 1em;"><code class="Python"># interesting comment
 @app.route('/news')
@@ -286,6 +322,25 @@ def news():
 </code>
 </pre>
 
+        <div class="row mb-3">
+        <div class="col-md-6 my-2">
+           <img class="img-fluid mx-auto d-block" src="assets/images/rowobjects_server_log.png">
+        </div>
+        <div class="col-md-6 my-2">
+            <img class="img-fluid mx-auto d-block" src="assets/images/newsprintout.png">
+        </div>
+    </div>
+
+       <h3>Sprint Six</h3>
+    <p>Aim: Build a form to go with the news page so that an authorised user
+        can <b> Create, Update, Delete</b> news items.
+    <br> Run and test</p>
+    <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/CRUD_plan.png" alt="Three browser views">
+    <h4>Testing the Add news, Update and Delete</h4>
+        <video controls>
+            <source src="assets/vids/CUDtest.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     <h3>Images (landscape fits better than portrait)</h3>
     <!-- one image -->
     <div class="row mb-2">
@@ -301,6 +356,7 @@ def news():
             <img class="img-fluid mx-auto d-block" src="assets/images/place_holder_sm.jpg">
         </div>
     </div>
+
         <hr>
 
     <h3>Video Test Example</h3>
