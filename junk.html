@@ -1,0 +1,100 @@
+
+<div class="container-lg">
+<h2>Example code presentations</h2>
+    <p>These do not need to be used extensively but look great in the right place</p>
+    <!-- pre stands for pre-formatted and will render text as it appears in the htm code -->
+    <!-- this means extra line breaks appear hence the code starting with no spacings or line breaks-->
+<h3>Some SQL</h3>
+<pre style="font-size: 1em;"><code class="SQL">SELECT track_name as "Tracks",
+album_name as "Album", album_artist as "Artist" --Interesting comment
+FROM music_table
+WHERE track_name like "R%";</code></pre>
+<h3>Some Python</h3>
+<pre style="font-size: 1em;"><code class="Python"># interesting comment
+def review_fruit(l):
+    for x in l:
+        output = "{:&le; 10} -- {: &gt;4}".format(x[0], x[1])
+        print(output)
+    return None</code></pre>
+
+
+    <h3>Some CSS</h3>
+<pre style="font-size: 1em;">
+
+
+<code class="css">/* interesting comment */
+:root{
+--base-back: rgb(150,150,150);
+--black: rgb(0,0,0);
+}
+body{
+margin: 0;
+padding: 0;
+font-size: 100%;
+}</code></pre>
+<h3>Some HTML</h3>
+<!-- to present html code on an html coded web page raises an interesting problem -->
+<!-- the code needs to be converted into "escape" characters to handle the < and > -->
+<!-- there are online tools to do it https://codebeautify.org/html-escape-unescape -->
+<pre style="font-size: 1em;">
+<code class="html">&lt;!-- interesting comment --&gt;
+&lt;li class=&quot;list-group-item d-flex justify-content-between align-items-start&quot;&gt;
+&lt;div class=&quot;ms-2 me-auto&quot;&gt;
+    &lt;div class=&quot;fw-bold&quot;&gt;Subheading&lt;/div&gt;
+    Content for list item
+&lt;/div&gt;
+&lt;span class=&quot;badge bg-primary rounded-pill&quot;&gt;14&lt;/span&gt;
+&lt;/li&gt;
+</code>
+</pre>
+    <h3>Some Javascript (most likely will not need)</h3>
+<pre style="font-size: 1em;">
+<code class="javscript">function inBoundsCheck(xM, yM, x, y, w, h){
+    if( xM > x && xM < x+w && yM > y && yM < y+h){
+    // interesting comment
+        return true;
+    }else{
+        return false;
+    }
+}</code>
+</pre>
+</div>
+
+
+
+
+
+    <h3>Images (landscape fits better than portrait)</h3>
+    <!-- one image -->
+    <div class="row mb-2">
+        <div class="col-md-12 my-2">
+            <img class="img-fluid mx-auto d-block my-2" src="assets/images/place_holder.png"> </div>
+        </div>
+    <!-- two images -->
+    <div class="row">
+        <div class="col-md-6 my-2">
+           <img class="img-fluid mx-auto d-block" src="assets/images/place_holder_sm.jpg">
+        </div>
+        <div class="col-md-6 my-2">
+            <img class="img-fluid mx-auto d-block" src="assets/images/place_holder_sm.jpg">
+        </div>
+    </div>
+        <hr>
+
+
+    <h3>Video Test Example</h3>
+        <video controls>
+            <source src="assets/vids/littleTest.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>
+            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+            molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+            vero eros et accumsan et iusto odio dignissim qui blandit praesent
+            luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        </p>
+        <hr>

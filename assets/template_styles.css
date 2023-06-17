@@ -1,5 +1,6 @@
 :root{
-    --base-back: rgb(150,150,150);
+    --base-back-light: rgb(250,250,250);
+    --base-back-dark: rgb(50,50,50);
     --black: rgb(0,0,0);
 }
 
@@ -11,7 +12,7 @@ body{
 
 
 .header{
-    background-color: var(--base-back);
+    background-color: var(--base-back-dark);
 }
 h1{
     color:white;
@@ -19,8 +20,10 @@ h1{
 }
 h2{
     margin: 2em 0 1em 0;
+    scroll-margin-top: 2em;
 }
 h3{
+    margin: 1em 0em;
     background-color: rgba(100,100,100, 0.2);
 }
 p, li{
@@ -39,12 +42,12 @@ hr{
 }
 
 .nav-item:hover{
-    background-color:var(--base-back);
+    background-color:var(--base-back-dark);
 }
 
 .nav-link{
     font-size: 1em;
-    color:var(--base-back);
+    color:var(--base-back-light);
 }
 .nav-link:hover{
     color:white;
@@ -54,7 +57,7 @@ a img{
 }
 
 footer{
-    background-color: var(--base-back);
+    background-color: var(--base-back-dark);
     text-align: center;
     padding: 1em 0 1em 0;
     font-size: 2em;
@@ -63,7 +66,8 @@ footer{
 
 
 .row{
-    background-color: var(--base-back);
+    background-color: var(--base-back-light);
+
 }
 
 ol li div{
@@ -71,12 +75,13 @@ ol li div{
 }
 
 
-
-
-
 video{
     max-height: 300px;
     display: block;
     margin:auto;
     margin-bottom: 1em;
+}
+
+pre{
+    font-size: 0.5em;
 }
