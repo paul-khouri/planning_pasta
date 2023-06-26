@@ -249,6 +249,34 @@ margin-bottom: 1em;
     <!-- *************************************** -->
     <!-- section -->
     <h2 id="db"> Developing the database and integrating into the Pasta site </h2>
+    <h3>Relevant implications database <i>(describe)</i></h3>
+    <ul>
+        <li><h4>Privacy:</h4> To be honest we have not done much about privacy. But the database should not be directly
+        accessible by the user. For example http://127.0.0.1:5000/data should not take us to the data folder.<br>
+        You can test and see that it doesn't. Passwords should be hashed, and the minum of personal data should be connected from the user.<br>
+        For example, there is no point collecting their address and phone number.</li>
+        <li><h4>Functionality:</h4> This means that the database should work properly. It should not have errors and the data
+        should be completely consistent between different cells in the same column. For example, using the SQLite data format
+        "YYYY-MM-DD HH:MM:00". Foreign key references need to be correct, so, for example, the correct member is associated
+        with the news post that they made. Functionality is addressed by creating precise entity relationship diagrams, creating an
+        sql installer fiile so that small changes and corrections are easy to implement and by comprehensive testing of the database output
+        on the web pages</li>
+        <li><h4>Sustainability and Future Proofing:</h4> This means that the database should be easy to maintain.<br>
+        Any corrections to names, titles or dates should only happen in one place in the database. If they need to be used in other tables
+        they should be referenced using foreign keys. An example of this could be the members or users stored in the database.
+        If their names are to be used in another part of the database, for example associated with posting a news item, there should be
+        a foreign key reference in the news table. This means that if a name is updated or other details added, then the new
+        name would appear in the news item, without any changes having to be made there.<br>
+        Overall the database tables should be for different 'entities', people, dance classes, news items, schedule items etc.
+        This also makes it easy to add new tables without altering what is already there.
+        </li>
+        <li><h4>End user considerations:</h4> The data in the database needs to be queried and presented in a way that caters
+        to the users needs.<br>
+        It should be presented in a clear organised structure and formatted to meet the expectations that users have for a modern website.<br>
+        Forms that allow the user to add, update or delete entries in the database should be simple to use and have validation
+        (or 'undos') to help the user avoid entering in incorrect or partial information.
+        </li>
+    </ul>
     <h3> Starting design</h3>
     <p> This is my staring design for a database for the pasta site. The news page will be an important way of keep
         people up to date with the latest events. Authorised users should be able to add a news event easily and should
