@@ -247,8 +247,11 @@ margin-bottom: 1em;
      <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/samplecommitcap_1.png" alt="Commit cap">
     <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/updatedprojectbacklog_1.png" alt="Backlog cap">
     <!-- *************************************** -->
+    <div class="px-5"style="background-color: antiquewhite;">
+        <h1 style="color:red;">I have coloured this section so you can see the database part.<br> DO NOT DO THIS</h1>
     <!-- section -->
     <h2 id="db"> Developing the database and integrating into the Pasta site </h2>
+
     <h3>Relevant implications database <i>(describe)</i></h3>
     <ul>
         <li><h4>Privacy:</h4> To be honest we have not done much about privacy. But the database should not be directly
@@ -277,6 +280,7 @@ margin-bottom: 1em;
         (or 'undos') to help the user avoid entering in incorrect or partial information.
         </li>
     </ul>
+
     <h3> Starting design</h3>
     <p> This is my staring design for a database for the pasta site. The news page will be an important way of keep
         people up to date with the latest events. Authorised users should be able to add a news event easily and should
@@ -420,7 +424,39 @@ margin-bottom: 1em;
              <img class="img-fluid mx-auto d-block w-75 my-5" src="assets/images/combo_page.png" alt="Three browser views">
         </div>
     </div>
-
+<!-- ******************************************************* -->
+<!-- Relevant implications addressing -->
+        <h3>Relevant implications database <i>(address)</i></h3>
+    <ul>
+        <li><h4>Privacy:</h4> The database is not accessible on http://127.0.0.1:5000/data (gives a page not found error).
+            The main piece of personal information (apart from their name) I have requested from the user is their email.
+            I have not asked for phone number or address as this is not necessary and the database stores a minuimum of
+            sensitive information. It would be good to hash the passwords, and that could be an further enhancement that could be
+            added in the future.
+        </li>
+        <li><h4>Functionality:</h4>  The database has been tested regularly throughout the development process. By running test queries
+            and also using the data table viewer, I have checked that data such as dates is consistently 'patterned'. Each piece of data
+            appears only once in the data base (for example a member's name). If it is required in other parts of the database
+            (for example associating a member name with a comment), this is done using foreign keys. The sql installer file has helped me to set
+            up the database and feel confident about making small changes and with rebuilding the database during the development
+            process. This has allowed many refinements to be implemented. Wherever possible I have made data fields unique and not null
+        as this means any repeated entries or missed fields are picked up quickly during development.</li>
+        <li><h4>Sustainability and Future Proofing:</h4> The relational design means that it is easy to add new features (such as likes)
+            as this would mean adding in a related table without having to change any pre-existing tables.
+            <br>
+            Uisng foreign keys means that any updates (such as to a member name) woould only have to happen once and any
+            use of it in other queries (such as for a comment) would automatically update.
+        </li>
+        <li><h4>End user considerations:</h4> The information in the database is managed through a website. This means that data that is
+            read is presented in a accessible way that can be styled and paginated in a manner that any user would be familiar with.<br>
+            Updating deleting and adding new data is managed through web forms, which can be styled and are again what
+            the user would be most familar with.<br>
+            Once a change has been made, the page redirects to the place that the information is displayed, so that
+            the user gets immediate confirmation that the action has taken place (an error page is also used that communicates
+            the reason why the action has failed).
+        </li>
+    </ul>
+</div>
 <!-- ******************************************************* -->
 <!-- Finalising and Testing section -->
     <h2 id="tg"> Finalising and Testing </h2>
